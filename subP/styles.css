@@ -687,7 +687,7 @@ hr {
 }
 
 area {
-	border: 1;
+	border: 10px;
 	outline: red solid thick;
 }
 
