@@ -600,10 +600,11 @@ strong {
 }
 
 .wrapper {
-  max-width: 1400px;
-  margin: 0 auto;
-  position: relative;
-  padding: 0 20px;
+	border: #FF00FF;
+	max-width: 1400px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 20px;
 }
 
 section img {
