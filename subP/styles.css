@@ -141,7 +141,10 @@ button,
 input,
 select,
 textarea {
-  font-family: sans-serif;
+	font-family: sans-serif;
+	outline-color: #FF0000;
+	outline-style: solid;
+	outline-width: medium;
 }
 
 /*
@@ -600,11 +603,10 @@ strong {
 }
 
 .wrapper {
-	outline: #FF0000 solid medium;
-	max-width: 1400px;
-	margin: 0 auto;
-	position: relative;
-	padding: 0 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
 }
 
 section img {
