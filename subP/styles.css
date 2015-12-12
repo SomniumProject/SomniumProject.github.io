@@ -687,10 +687,8 @@ hr {
 }
 
 area {
-	border:thick;
-	outline-color:red;
-	border-color:red;
-	outline-width:thick;			 
+	border: 1;
+	outline: red solid thick;
 }
 
 dt {
