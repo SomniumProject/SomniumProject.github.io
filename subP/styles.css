@@ -600,14 +600,12 @@ strong {
 }
 
 .wrapper {
-	outline: #FF0000;
+	outline: #FF0000 double medium;
 	max-width: 1400px;
 	margin: 0 auto;
 	position: relative;
 	padding: 0 20px;
-	outline-color: #FF0000;
-	outline-style: double;
-	outline-width: medium;
+	outline-color: #00FF00;
 }
 
 section img {
