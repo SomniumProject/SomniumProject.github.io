@@ -142,9 +142,9 @@ input,
 select,
 textarea {
 	font-family: sans-serif;
-	outline-color: #FF0000;
-	outline-style: solid;
-	outline-width: medium;
+	outline-color: #FFFFFF;
+	outline-style: none;
+	outline-width: inherit;
 }
 
 /*
@@ -684,6 +684,12 @@ hr {
   height: 3px;
   background: transparent url("../images/hr.gif") center center repeat-x;
   margin: 0 0 20px;
+}
+
+area {
+	border:medium red;
+	outline:red
+	solid
 }
 
 dt {
