@@ -115,8 +115,10 @@
     $(document).ready(function ()
     {
     	$('#KeplerRT1200x').mapster({
-    	mapKey: 'shape',
+    	mapKey: 'shape', 	
     	fill: true,	fillColor: 'FF0000', fillOpacity: 1,
+    	render_highlight: { fillOpacity: 0.6 },
+    	render_select: { fillOpacity: 0.2 }.
     });
     });	
     </script>
