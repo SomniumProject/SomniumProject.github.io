@@ -346,10 +346,8 @@ nav ol {
  *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
  */
 img {
-  border: 0;
-  /* 1 */
-  -ms-interpolation-mode: bicubic;
-  /* 2 */
+	border: 0;
+/* 1 */-ms-interpolation-mode: bicubic;
 }
 
 /*
@@ -600,10 +598,11 @@ strong {
 }
 
 .wrapper {
-  max-width: 1400px;
-  margin: 0 auto;
-  position: relative;
-  padding: 0 20px;
+	max-width: 1400px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 20px;
+	text-align: center;
 }
 
 section img {
@@ -776,10 +775,10 @@ dt {
 }
 
 section {
-  max-width: 1400px;
-  padding: 30px 0px 50px 0px;
-  margin: 20px 0;
-  margin-top: 70px;
+	max-width: 1400px;
+	padding: 30px 0px 50px 0px;
+	margin: 0 auto;
+	margin-top: 70px;
 }
 section #title {
   border: 0;
