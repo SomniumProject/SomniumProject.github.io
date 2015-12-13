@@ -9,16 +9,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 	<script language="javascript" src="../scripts/jquery.imagemapster.js"></script>
 
-    <script src="../javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="../stylesheets/ie.css">
-    <![endif]-->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
   </head>
   <body>
    
@@ -56,18 +46,19 @@
         </div>
 
 
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
     <script language="javascript">
     $(document).ready(function ()
     {
     	$('#KeplerRT1200x').mapster({
-    	fill: true,	fillColor: 'FF0000', fillOpacity: 1,
-    	render_highlight: { fillOpacity: 0.6 }
-    	});
-    });	
+    		mapKey: 'shape',
+    		fill: true,	fillColor: 'FF0000', fillOpacity: 1,
+    		render_highlight: { fillOpacity: 0.6 },
+    		})
+    	.mapster('set',true,'circle');
     </script>
-     <map name="KeplerRT1200x" >
+ 
+    <map name="KeplerRT1200x" >
 	        <area shape="circle" alt="A" coords="453,195,53" href="#" title="A" >
 			<area shape="circle" alt="B" coords="248,200,50" nohref title="B" >
 			<area shape="circle" alt="C" coords="982,189,50" nohref title="C" >
