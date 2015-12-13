@@ -11,7 +11,9 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="../P1-KeplerRT/javascripts/respond.js"></script>
-        
+    
+	<script language="javascript" src="scripts/jquery.imagemapster.js"></script></script>
+    
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -43,8 +45,8 @@
         
         <div class="spimagemap" align="center" >
         <img src="KeplerRT1200x.jpg" width="1200" height="1839" style="border-style:none" usemap="#KeplerRT1200x" >
-        <map id="KRT" name="KeplerRT1200x">
-	        <area shape="circle" alt="A" coords="453,195,53" nohref title="A" />
+        <map id="KRT" name="KeplerRT1200x" >
+	        <area shape="circle" alt="A" coords="453,195,53" nohref title="A" color="green" href="#" >
 			<area shape="circle" alt="B" coords="248,200,50" nohref title="B" >
 			<area shape="circle" alt="C" coords="982,189,50" nohref title="C" >
 			<area shape="circle" alt="D" coords="617,154,55" nohref title="D" >
@@ -108,6 +110,19 @@
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+    <script language="javascript">
+    $(document).ready(function ()
+    {
+    	$('#KeplerRT1200x').mapster({
+    	singleSelect : true,
+    	render_highlight : { altImage : 'images/shape2.gif' },
+    	mapKey: 'color',
+    	fill : true, altImage : 'images/shape3.gif',
+    	fillOpacity : 1,
+    });
+    });	
+    </script>
     
   </body>
 </html>
