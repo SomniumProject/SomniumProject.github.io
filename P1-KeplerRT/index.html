@@ -29,7 +29,7 @@
         </div>
         </section>
         
-    <img src="KeplerRT1200x.jpg" width="1200" height="1839" style="border-style:none" usemap="#KeplerRT1200x" >
+<img src="KeplerRT1200x.jpg" width="1200" height="1839" style="border-style:none" usemap="#KeplerRT1200x" >
     			
 <img style="width:400px;height:400px;border:0;" id="shape1" src="images/shape1.gif" alt="shape1" usemap="#shape1">
 
@@ -48,21 +48,26 @@
 
 
     
-    <script language="javascript">
-    $(document).ready(function ()
-    {
-    	$('#KeplerRT1200x').mapster({
-    		mapKey: 'shape',
-    		})
-    	.mapster('set',true,'circle');
-    </script>
+    <script>
+	    $(document).ready(function ()
+	    {
+	    	$('#KeplerRT1200x').mapster({
+				singleSelect : true,
+				render_highlight : { altImage : 'KRTred.jpg' },
+			     mapKey: 'color',
+				fill : true, altImage : 'KRTgreen.jpg',
+				fillOpacity : 1,
+});
+});
+</script>
+    
  
     <map name="KeplerRT1200x" >
-	        <area shape="circle" alt="A" coords="453,195,53" href="#" title="A" >
-			<area shape="circle" alt="B" coords="248,200,50" nohref title="B" >
-			<area shape="circle" alt="C" coords="982,189,50" nohref title="C" >
-			<area shape="circle" alt="D" coords="617,154,55" nohref title="D" >
-			<area shape="circle" alt="E" coords="738,234,52" nohref title="E" >
+	        <area shape="circle" alt="A" coords="453,195,53" color="green" href="#" title="A" >
+			<area shape="circle" alt="B" coords="248,200,50" nohref color="green" href="#" title="B" >
+			<area shape="circle" alt="C" coords="982,189,50" nohref color="green" href="#" title="C" >
+			<area shape="circle" alt="D" coords="617,154,55" nohref color="green" href="#" title="D" >
+			<area shape="circle" alt="E" coords="738,234,52" nohref color="green" href="#" title="E" >
 			<area shape="circle" alt="F" coords="725,61,55" nohref title="F" >
 			<area shape="circle" alt="G" coords="152,261,50" nohref title="G" >
 			<area shape="circle" alt="H" coords="1094,250,50" nohref title="H" >
