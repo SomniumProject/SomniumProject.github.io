@@ -144,18 +144,24 @@ var map = $('#KeplerRT');
     },
 */    
 var single_opts = {
-			fill : true, altImage : 'images/goldbluemapKRT1200x.gif',
-			fillOpacity : 0.2,
+			fill : true, 
+			fillColor : '2137ff',
+			fillOpacity : 0.5
 			
     };
-    
-    
-var all_opts = {
-			fill : true, altImage : 'images/goldbluemapKRT1200x.gif',
-			fillOpacity : 0.3,
+//
+//var group_opts = {
+//	fill : true, altImage : 'images/goldbluemapKRT1200x.gif',
+// 			fillOpacity : 0.2,
+//  	};
+     
+var	all_opts = {
+			fill : true, 
+			fillColor : 'ff2a1a',
+			fillOpacity : 0.5
     };
     
-var initial_opts = {
+var	initial_opts = {
         mapKey: 'data-name',
         isSelectable: false,
         onMouseover: function (data) {
@@ -167,14 +173,11 @@ var initial_opts = {
             */
 	        },
 
-        onMouseout: function (data) {
+		 onMouseout: function (data) {
             inArea = false;
 
 //          $('#KeplerRT-caption').hide();
         	}
-        	
-        	
-        	
     };
     
 var opts = $.extend({}, all_opts, initial_opts, single_opts);
@@ -193,15 +196,17 @@ var opts = $.extend({}, all_opts, initial_opts, single_opts);
                 map.mapster('set_options', all_opts)
                     .mapster('set', true, 'all')
                     .mapster('set_options', single_opts);
-            }
-        }).bind('mouseout', function () {
+        		    }
+        	})
+        
+        .bind('mouseout', function () {
             if (!inArea) {
-                map.mapster('set', false, 'all');
-            }
+ 	               map.mapster('set', false, 'all')
+                
+             }
         });
+        
    </script>
-
-
 
 
     </div>
