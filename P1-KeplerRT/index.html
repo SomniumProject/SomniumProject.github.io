@@ -145,7 +145,7 @@ var map = $('#KeplerRT');
 var single_opts = {
 			
 		//	altImage : 'images/goldbluemapKRT1200x.gif',
- 		fillOpacity : 0.2,
+ 		//fillOpacity : 0.2,
 
 			
     };
@@ -174,9 +174,8 @@ var	initial_opts = {
             */
 	        },
 	       
-	    onClick: function (data) {
+	     onClick: function (data) {
 	        inArea = true;
-	        map.mapster('set', false, 'all')
 			},   
 
 		 onMouseout: function (data) {
@@ -214,13 +213,9 @@ var opts = $.extend({}, all_opts, initial_opts, single_opts);
    	     	})
         	
         .bind('click', function () 
-        	{
-				if (!inArea) 
-				{
-				map.mapster('set', false, 'all')
-				} 
-   			}
-   			);
+        	{				
+			map.mapster('set', 'toggle', 'all')
+			});
         	
         
    </script>
