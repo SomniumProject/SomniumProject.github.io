@@ -143,7 +143,6 @@ map = $('#KeplerRT'),
 single_opts = {
 			fill : true, 
 			altImage : 'images/goldbluemapKRT1200x.gif',
- 			fillOpacity : 0.2
 	    },
 
 all_opts = {
@@ -152,17 +151,26 @@ all_opts = {
  			fillOpacity : 0.2
 	    },
     
-initial_opts = {
+initial_opts = 
+		{
         mapKey: 'data-name',
         isSelectable: false,
    		scaleMap: true,
-	     onMouseover: function (data) {
+	    onMouseover: function (data) 
+	    	{
             inArea = true;
             },
-		 onMouseout: function (data) {
+		onMouseout: function (data) 
+			{
             inArea = false;
-            }
-	    };
+            },
+            
+        onClick: function (data) 
+        	{
+        	inArea = true;
+         	$('#KeplerRT').mapster('set',false,'all');
+         	}
+        },
 
     
 opts = $.extend({}, all_opts, initial_opts, single_opts);
@@ -173,20 +181,28 @@ opts = $.extend({}, all_opts, initial_opts, single_opts);
     // again for the image when entering an area, so all areas would stay highlighted when entering
     // a specific area in those browsers otherwise. It makes no difference for other browsers.
     -->
-
+               		 
 map.mapster('unbind')
             .mapster(opts)
-            .bind('mouseover', function () {
-                if (!inArea) {
+            .bind('mouseover', function () 
+            	{
+                if (!inArea) 
+                	{
                     map.mapster('set_options', all_opts)
                        .mapster('set', true, 'all')
                        .mapster('set_options', single_opts);
-                }
-            }).bind('mouseout', function () {
-                if (!inArea) {
+                	}
+            }).bind('mouseout', function () 
+            	{
+                if (!inArea) 
+                	{
                     map.mapster('set', false, 'all');
+                	}
+            }).bind('click', function () 
+            	{
+            	map.mapster('set', 'toggle', 'all');
                 }
-            });        	
+            );
         
    </script>
 
