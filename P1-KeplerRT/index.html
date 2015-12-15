@@ -87,7 +87,6 @@
 <area shape="poly" data-name="blu,all" color="blue" alt="" coords="307, 1380, 431, 1380, 431, 1256, 307, 1256" href="#" title="B20">
 <area shape="poly" data-name="red,all" color="red" alt="" coords="1022, 1532, 1146, 1532, 1146, 1408, 1022, 1408" href="#" title="R5">
 <area shape="poly" data-name="blu,all" color="blue" alt="" coords="871, 1372, 995, 1372, 995, 1248, 871, 1248" href="#" title="B21">
-
 </map>
 
 
@@ -211,8 +210,19 @@ var opts = $.extend({}, all_opts, initial_opts, single_opts);
      	.bind('mouseout', function () {
             if (!inArea) {
  	               map.mapster('set', false, 'all')
-     	        }
-     	   });
+   			       }
+   	     	})
+        	
+        .bind('click', function () 
+        	{
+				if (!inArea) 
+				{
+				map.mapster('set', false, 'all')
+				} 
+			
+   			}
+   			);
+        	
         
    </script>
 
